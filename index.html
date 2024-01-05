@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/4c4cf0b696.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/cdn.jsdelivr.net_npm_swiper@10.1.0_swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,400&family=News+Cycle&family=Yrsa:wght@500&display=swap');
+      </style>
+</head>
+<body>
+    <main>
+        <div id="dash_nav">
+            <h2 class="dash_logo">Gotech_dashboard</h2>
+            <div id="act_set" class="dash_links">
+                <a id="theme_button" onclick="toggleBackgroundColor()"><li><i class="fa-solid fa-palette"></i></li></a>
+                <a href=""><li><i class="fa-sharp fa-solid fa-bell"></i><i class="fa-solid fa-chevron-down"></i></li></a>
+                <a href=""><li><i class="fa-solid fa-envelope"></i><i class="fa-solid fa-chevron-down"></i></li></a>
+                <a href=""><li><i class="fa-solid fa-user"></i><i class="fa-solid fa-chevron-down"></i></li></a>
+                <a href=""><li>Admin<i class="fa-solid fa-chevron-down"></i></li></a>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div id="dash_sec">   
+            <header class="nav dropdown" id="menu" onclick="toggleDropdown()">
+                <button><div id="my_logo"><i class="fa-solid fa-house"></i> Gotech_dashboard</div><i id="my_logo_down" class="fa-solid fa-chevron-down"></i></button>
+                <ul class="dropdown-content" id="myDropdown">
+                    <a href=""><li><p>Dashboard</p></li></a>
+                    <a href=""><li><p>Profile</p></li></a>
+                    <a href=""><li><p>Cart</p></li></a>
+                    <a href=""><li><p>Settings</p></li></a>
+                    <a href=""><li><p>Orders</p></li></a>
+                    <a href=""><li><p>Messages</p></li></a>
+                </ul>
+            </header>
+            
+            <div id="dash_board">
+                <div class="dashboard_sec">
+                    <div id="dash_head">
+                        <div id="highlights">
+                            <h1>Good Day, Samantha!</h1>
+                             <p>Hey Samantha, Here is your store overview</p>
+                        </div>
+    
+                        <div id="total_sales">
+                            <div class="sales_visits">
+                                <p>New clicks</p>
+                                <h3>10,200</h3>
+                            </div>
+                            <div class="sales_total">
+                                <p>New sales</p>
+                                <h3>10,200</h3>
+                            </div>
+                        </div>
+    
+                        <div id="sales_notification">
+                            <li class="not_product">
+                                <p>10 new admin notification</p>
+                                <a href="">view notification <i class="fa-solid fa-circle-chevron-right"></i></a>
+                            </li>
+                            <li class="not_product">
+                                <p>18 new order notification</p>
+                                <a href="">view notification <i class="fa-solid fa-circle-chevron-right"></i></a>
+                            </li>
+                            <li class="not_product">
+                                <p>5 pending order payments notification</p>
+                                <a href="">view notification <i class="fa-solid fa-circle-chevron-right"></i></a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="visual_split">
+                    
+                    <div id="dash_visuals">
+
+                        <div class="order-chart">
+                            <canvas id="myClicks"></canvas>
+                        </div>  
+                        
+
+                        <div class="order-chart">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+          function toggleBackgroundColor() {
+            var body = document.body;
+            body.classList.toggle("light-theme");
+            body.classList.toggle("dark-theme");
+            }
+        </script>
+
+    </main>
+
+    
+    <script src="/javascript/script.js"></script>
+    <script src="/javascript/sub_menu.js"></script>
+    <script src="/javascript/visuals.js"></script>
+</body>
+</html>
